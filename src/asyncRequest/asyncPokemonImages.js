@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
-const AsyncClickPokemon = (urlApi, loading, setLoading) => {
+const AsyncPokemonImages = (urlApi) => {
     const [data, setData] = useState([]);
-    
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         setLoading(true)
         const fetchData = async () => {
@@ -43,4 +44,4 @@ const AsyncClickPokemon = (urlApi, loading, setLoading) => {
     return [data, loading];
     };
     
-export default AsyncClickPokemon;
+export default AsyncPokemonImages;

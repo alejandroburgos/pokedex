@@ -35,7 +35,7 @@ const GetPokemons = (urlApi) => {
             //console.log("no le has pasado nada a urlAPi")
         }
         
-    }, [urlApi]);
+    }, []);
 
     
 
