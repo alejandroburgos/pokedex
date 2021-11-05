@@ -1,27 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter } from 'react-router-dom';
-import { Home } from "./Components/Home";
-import './index.css';
+import React, { useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
-function App() {
+import { Home } from './Components/Home';
+import { Pokemon } from './Components/Pokemon';
 
-  // const [loading, setLoading] = useState(false);
+export const App = () => {
+    return (
+        <>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="pokemon/:id" element={<Pokemon />} />
+          </Routes>
+        </Router>
 
-  // const [pokemons] = GetPokemons("pokemon?limit=100&offset=200");
-  // const [urlPokemon, setUrlPokemon] = useState("");
-  // const [clickPokemon] = AsyncClickPokemon(urlPokemon, loading, setLoading);
-  
-  // console.log(loading);
-  // console.log(clickPokemon);
-
-
-  return (
-    <>
-        <BrowserRouter>
-            <Home />
-        </BrowserRouter>
-    </>
-  );
+        </>
+    )
 }
-
-export default App;
